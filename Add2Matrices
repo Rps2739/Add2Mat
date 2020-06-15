@@ -1,0 +1,88 @@
+package extra;
+import java.util.*;
+
+public class Extra5 {
+
+	public static void main(String[] args) {
+		Scanner in=null;
+		int s[][]= new int[3][3];
+		int t[][]= new int[3][3];
+		int u[][]= new int[3][3];
+		try
+		{
+		in = new Scanner(System.in);
+		System.out.println("Enter Size Of Matrix:");
+		int n=in.nextInt();
+		System.out.println("Enter S Matrix:");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				System.out.println("Enter:");
+				s[i][j]=in.nextInt();
+			}
+			
+		}
+		System.out.println("Enter T Matrix:");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				System.out.println("Enter:");
+				t[i][j]=in.nextInt();
+			}
+				
+		}
+		System.out.println("S Matrix:");
+		for(int i=0;i<3;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				System.out.print(s[i][j]+" ");
+				
+			}
+			System.out.print("\n");
+				
+		}
+		System.out.println("T Matrix:");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				
+				System.out.print(t[i][j]+" ");
+			}
+			System.out.print("\n");
+				
+		}
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				
+				u[i][j]=s[i][j]+t[i][j];
+			}
+		
+				
+		}
+		System.out.println("U Matrix:");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				
+				System.out.print(u[i][j]+" ");
+			}
+			System.out.print("\n");
+				
+		}
+		
+		}
+		catch (Exception e) { 
+        } 
+        finally { 
+            in.close(); 
+        } 
+	}
+
+}
